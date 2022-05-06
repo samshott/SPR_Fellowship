@@ -1,0 +1,27 @@
+---
+title: "FolderOrginization_RainGauges"
+author: "Sam Ericksen"
+date: '2022-05-06'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+```{r packages}
+library(dplyr)
+```
+
+search folders for xls / csv. open each one of those and look for pairs of dates and numbers (rainfall decimals). save date/rainfall/location (from filename). Check for duplicates!
+
+```{r}
+
+list.files(pattern = "csv$", 
+           full.names = TRUE, 
+           recursive = TRUE)
+list.files(pattern = "hobo$")
+
+```
