@@ -18,38 +18,10 @@ library(dplyr)
 search folders for xls / csv. open each one of those and look for pairs of dates and numbers (rainfall decimals). save date/rainfall/location (from filename). Check for duplicates!
 
 ```{r}
-getwd()
-csv_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                        pattern = "csv$", 
-                        full.names = TRUE, 
-                        recursive = TRUE)
-hobo_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                         pattern = "hobo$", 
-                         full.names = TRUE, 
-                         recursive = TRUE)
-xls_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                         pattern = "xls$", 
-                         full.names = TRUE, 
-                         recursive = TRUE)
 
-```
+list.files(pattern = "csv$", 
+           full.names = TRUE, 
+           recursive = TRUE)
+list.files(pattern = "hobo$")
 
-find files that are in .hobo format that haven't been converted to spreadsheets yet
-
-```{r}
-
-get_filename <- function(path){
-  
-  file <- tail( strsplit(path, "/")[[1]], 1)
-  filename <- strsplit( file , "\\.")[[1]][1]
-  
-  return(filename)
-}
-
-csv_names <- lapply(csv_file_paths, get_filename)
-xls_names <- lapply(xls_file_paths, get_filename)
-spreadsheet_names <- c(csv_names,xls_names)
-hobo_names <- lapply(hobo_file_paths, get_filename)
-
-#setdiff()
 ```
