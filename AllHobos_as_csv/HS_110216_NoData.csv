@@ -1,0 +1,6 @@
+﻿"Plot Title: HS"
+"#","Date Time, GMT-07:00","Event, units (LGR S/N: 9668992, SEN S/N: 9668992)","Coupler Detached (LGR S/N: 9668992, SEN S/N: 9668992)","Coupler Attached (LGR S/N: 9668992, SEN S/N: 9668992)","End Of File (LGR S/N: 9668992, SEN S/N: 9668992)"
+1,02/01/11 11:40:48 AM,0.00,,,
+2,02/01/11 11:40:53 AM,,Logged,,
+3,02/16/11 04:37:03 PM,0.01,,,
+4,02/16/11 04:37:04 PM,0.01,,Logged,Logged

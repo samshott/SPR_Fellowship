@@ -1,0 +1,8 @@
+﻿"Plot Title: HS"
+"#","Date Time, GMT-07:00","Temp, °F (LGR S/N: 10592074, SEN S/N: 10592074)","Event, units (LGR S/N: 10592074, SEN S/N: 10592074)","Coupler Detached (LGR S/N: 10592074, SEN S/N: 10592074)","Coupler Attached (LGR S/N: 10592074, SEN S/N: 10592074)","Host Connected (LGR S/N: 10592074, SEN S/N: 10592074)","End Of File (LGR S/N: 10592074, SEN S/N: 10592074)"
+1,04/27/17 10:18:04 AM,79.678,0.00,,,,
+2,04/27/17 10:18:15 AM,,,Logged,,,
+3,04/27/17 10:19:43 AM,,,,Logged,,
+4,04/27/17 10:19:49 AM,,,Logged,,,
+5,04/27/17 10:19:51 AM,,,,Logged,,
+6,04/27/17 10:19:54 AM,,0.00,,,Logged,Logged

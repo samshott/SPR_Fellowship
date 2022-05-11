@@ -1,0 +1,9 @@
+﻿"Plot Title: LC RRG"
+"#","Date Time, GMT-07:00","Event, inches (LGR S/N: 10592081, SEN S/N: 10592081)","Coupler Attached (LGR S/N: 10592081, SEN S/N: 10592081)","Stopped (LGR S/N: 10592081, SEN S/N: 10592081)","End Of File (LGR S/N: 10592081, SEN S/N: 10592081)"
+1,05/15/15 02:07:16 PM,0.00,,,
+2,05/26/15 12:42:25 AM,0.01,,,
+3,06/10/15 03:48:57 PM,0.02,,,
+4,06/10/15 04:02:42 PM,0.03,,,
+5,06/10/15 04:16:06 PM,0.04,,,
+6,07/07/15 08:54:30 AM,,Logged,,
+7,07/07/15 08:54:39 AM,0.04,,Logged,Logged

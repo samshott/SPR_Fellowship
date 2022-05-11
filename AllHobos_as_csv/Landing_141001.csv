@@ -1,0 +1,6 @@
+﻿"Plot Title: Landing"
+"#","Date Time, GMT-07:00","Event, inches (LGR S/N: 9668993, SEN S/N: 9668993)","Coupler Detached (LGR S/N: 9668993, SEN S/N: 9668993)","Coupler Attached (LGR S/N: 9668993, SEN S/N: 9668993)","Stopped (LGR S/N: 9668993, SEN S/N: 9668993)","End Of File (LGR S/N: 9668993, SEN S/N: 9668993)"
+1,09/17/14 02:22:33 PM,0.00,,,,
+2,09/17/14 02:22:45 PM,,Logged,,,
+3,10/01/14 03:40:23 PM,,,Logged,,
+4,10/01/14 03:40:25 PM,0.00,,,Logged,Logged

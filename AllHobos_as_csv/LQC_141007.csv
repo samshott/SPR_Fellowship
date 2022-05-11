@@ -1,0 +1,7 @@
+﻿"Plot Title: LQC"
+"#","Date Time, GMT-07:00","Event, inches (LGR S/N: 10592080, SEN S/N: 10592080)","Coupler Attached (LGR S/N: 10592080, SEN S/N: 10592080)","Coupler Detached (LGR S/N: 10592080, SEN S/N: 10592080)","End Of File (LGR S/N: 10592080, SEN S/N: 10592080)"
+1,09/30/14 12:38:43 PM,0.00,,,
+2,10/06/14 01:47:41 AM,0.01,,,
+3,10/07/14 01:22:16 PM,,Logged,,
+4,10/07/14 01:22:22 PM,,,Logged,
+5,10/07/14 01:22:36 PM,0.01,Logged,,Logged

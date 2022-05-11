@@ -1,0 +1,6 @@
+﻿"Plot Title: Landing Rain Gage"
+"#","Date Time, GMT-07:00","Batt, V (LGR S/N: 9668993, SEN S/N: 9668993)","Event, units (LGR S/N: 9668993, SEN S/N: 9668993)","Coupler Detached (LGR S/N: 9668993, SEN S/N: 9668993)","Coupler Attached (LGR S/N: 9668993, SEN S/N: 9668993)","Host Connected (LGR S/N: 9668993, SEN S/N: 9668993)","End Of File (LGR S/N: 9668993, SEN S/N: 9668993)"
+1,05/12/10 09:39:06 AM,3.01,0.00,,,,
+2,05/12/10 09:39:19 AM,,,Logged,,,
+3,05/12/10 09:39:28 AM,,,,Logged,,
+4,05/12/10 09:39:29 AM,,0.00,,,Logged,Logged

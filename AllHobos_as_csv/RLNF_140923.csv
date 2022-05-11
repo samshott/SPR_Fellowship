@@ -1,0 +1,6 @@
+﻿"Plot Title: RLNF"
+"#","Date Time, GMT-07:00","Event, inches (LGR S/N: 10592085, SEN S/N: 10592085)","Coupler Attached (LGR S/N: 10592085, SEN S/N: 10592085)","Coupler Detached (LGR S/N: 10592085, SEN S/N: 10592085)","End Of File (LGR S/N: 10592085, SEN S/N: 10592085)"
+1,09/18/14 02:05:31 PM,0.00,,,
+2,09/23/14 10:40:50 AM,,Logged,,
+3,09/23/14 10:40:53 AM,,,Logged,
+4,09/23/14 10:40:56 AM,0.00,Logged,,Logged

@@ -1,0 +1,6 @@
+﻿"Plot Title: LQC"
+"#","Date Time, GMT-08:00","Temp, °F (LGR S/N: 10592080, SEN S/N: 10592080)","Event, units (LGR S/N: 10592080, SEN S/N: 10592080)","Host Connected (LGR S/N: 10592080, SEN S/N: 10592080)","End Of File (LGR S/N: 10592080, SEN S/N: 10592080)"
+1,12/11/17 03:07:29 PM,70.480,0.00,,
+2,12/11/17 03:07:47 PM,,0.01,,
+3,12/11/17 03:16:59 PM,,,Logged,
+4,12/11/17 03:17:10 PM,,0.01,Logged,Logged

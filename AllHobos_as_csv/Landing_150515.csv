@@ -1,0 +1,12 @@
+﻿"Plot Title: Landing"
+"#","Date Time, GMT-07:00","Event, inches (LGR S/N: 9668993, SEN S/N: 9668993)","Coupler Detached (LGR S/N: 9668993, SEN S/N: 9668993)","Coupler Attached (LGR S/N: 9668993, SEN S/N: 9668993)","Bad Battery (LGR S/N: 9668993, SEN S/N: 9668993)","Stopped (LGR S/N: 9668993, SEN S/N: 9668993)","End Of File (LGR S/N: 9668993, SEN S/N: 9668993)"
+1,03/25/15 11:17:43 AM,0.00,,,,,
+2,03/25/15 11:18:06 AM,,Logged,,,,
+3,04/05/15 10:04:51 AM,0.01,,,,,
+4,04/05/15 10:21:29 AM,0.02,,,,,
+5,04/05/15 10:45:13 AM,0.03,,,,,
+6,04/05/15 12:26:16 PM,0.04,,,,,
+7,04/05/15 02:22:33 PM,0.05,,,,,
+8,05/15/15 11:16:36 AM,,,Logged,,,
+9,05/15/15 11:16:37 AM,,,,Logged,,
+10,05/15/15 11:16:40 AM,0.05,,,,Logged,Logged
