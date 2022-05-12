@@ -15,6 +15,10 @@ knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 ```
 
+## Check for files
+
+### Look at all files in the OneDrive Folder
+
 search folders for xls / csv. open each one of those and look for pairs of dates and numbers (rainfall decimals). save date/rainfall/location (from filename). Check for duplicates!
 
 ```{r collect file paths}
@@ -39,9 +43,31 @@ txt_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
                          pattern = "txt$", 
                          full.names = TRUE, 
                          recursive = TRUE)
+
+#file.copy(hobo_file_paths, "LegacyFiles/All_Hobos/") #hobo files for HOBOware bulk export
+
+#file.copy(dtf_file_pahts, "LegacyFiles/All_dtf/") #dtf files for HOBOware bulk export
+
+
+legacy_csvs <- list.files("csv_from_legacy/",
+                          pattern = "csv$")
 ```
 
-find files that are in .hobo format that haven't been converted to spreadsheets yet
+### Bulk convert files
+
+using HOBOware Pro, bulk export all of the previous .dtf and .hobos to a new folder as .csv
+
+### Save paths from bulk export
+
+```{r bulk exported csvs}
+legacy_csvs <- list.files("csv_from_legacy/",
+                          pattern = ".csv$",
+                          recursive = TRUE)
+```
+
+## Make a Log file
+
+This will allow us to later employ memoization to speed up future scans of the folder. Find files that are in .hobo and .dtf format that haven't been converted to spreadsheets yet.
 
 ```{r}
 
