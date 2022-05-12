@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r packages}
 library(dplyr)
+library(poisdata) #read and manipulate HOBOware derived .csv
 ```
 
 ## Check for files
@@ -24,23 +25,23 @@ search folders for xls / csv. open each one of those and look for pairs of dates
 ```{r collect file paths}
 
 csv_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                        pattern = "csv$", 
+                        pattern = ".csv$", 
                         full.names = TRUE, 
                         recursive = TRUE)
 hobo_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                         pattern = "hobo$", 
+                         pattern = ".hobo$", 
                          full.names = TRUE, 
                          recursive = TRUE)
 xls_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                         pattern = "xls$", 
+                         pattern = ".xls$", 
                          full.names = TRUE, 
                          recursive = TRUE)
 dtf_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                         pattern = "dtf$", 
+                         pattern = ".dtf$", 
                          full.names = TRUE, 
                          recursive = TRUE)
 txt_file_paths <- list.files("OneDrive_1_5-6-2022/" ,
-                         pattern = "txt$", 
+                         pattern = ".txt$", 
                          full.names = TRUE, 
                          recursive = TRUE)
 
