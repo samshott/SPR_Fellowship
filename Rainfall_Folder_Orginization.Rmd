@@ -63,7 +63,8 @@ using HOBOware Pro, bulk export all of the previous .dtf and .hobos to a new fol
 ```{r bulk exported csvs}
 legacy_csvs <- list.files("csv_from_legacy/",
                           pattern = ".csv$",
-                          recursive = TRUE)
+                          recursive = TRUE,
+                          full.names = TRUE)
 ```
 
 ## Make a Log file
@@ -85,5 +86,6 @@ xls_names <- lapply(xls_file_paths, get_filename)
 spreadsheet_names <- c(csv_names,xls_names)
 hobo_names <- lapply(hobo_file_paths, get_filename)
 
-#setdiff()
+
+#setdiff() #find differences in files between character vectors
 ```
