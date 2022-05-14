@@ -19,11 +19,6 @@ def search_filetype(path = ".", extentension = ""):
                 paths.append(dirpath + filename)
     return paths
 
-txt_paths = search_filetype(path = "./OneDrive_1_5-6-2022/",extentension=".txt")
-
-csv_paths = search_filetype(extentension=".csv")
-
-
 def copy_file(search_path=".", copy_dir="", extentension="",show_errors = True):
     """
     :param search_path: string, directory to search
@@ -46,9 +41,11 @@ def copy_file(search_path=".", copy_dir="", extentension="",show_errors = True):
     return (error_files)
 
 
-copy_file(search_path="./OneDrive_1_5-6-2022/",
-          copy_dir= "./LegacyFiles/All_txt/",
-          extentension=".txt")
+# copy_file(search_path="./OneDrive_1_5-6-2022/",
+#           copy_dir= "./LegacyFiles/All_txt/",
+#           extentension=".txt")
+
+
 
 
 
