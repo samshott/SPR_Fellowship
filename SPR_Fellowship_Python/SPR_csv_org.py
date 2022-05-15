@@ -8,6 +8,7 @@ os.chdir("..")
 os.getcwd()
 
 def search_filetype(path = ".", extentension = ""):
+
     """
     :param path: string, where to search
     :param extentension: string, what files to look for
@@ -48,13 +49,24 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
     :return: list, index 0: pandas data.frame of appended files, index 1: error files
     """
     append_df=pd.DataFrame()
+    # append_df.columns["Date Time"] = ""
+    # append_df.columns["Rain (in)"] = ""
+    # append_df.columns["Temp"] = ""
+    # append_df.columns["Station"] = ""
     error_files=[]
+
     for txt_file in path_list:
         try:
             txt_df = pd.read_csv(txt_file, sep=sep)
             for column in txt_df.columns:
                 if not (column in append_df.columns):
-                    append_df[str(column)] = ""
+                    append_df[str(column)] = ""  #for preserving columns from logger. maybe better to assume order
+            # if txt_df.shape[1] == 2:
+            #     txt_df.columns = ["Date Time", "Rain (in)"]
+            #     txt_df["Temp"] = ""
+            # elif txt_df.shape[1] == 3:
+            #     txt_df.columns = ["Date Time", "Rain (in)", "Temp"]
+            txt_df["File Name"] = txt_file.split()[-1].split(".")[0]
             append_df = append_df.append(txt_df)
         except:
             error_files.append(txt_file)
@@ -74,14 +86,13 @@ list_txt = search_filetype(path="LegacyFiles/All_txt/", extentension=".txt")
 
 
 
-
 test_txt_df1 = pd.read_csv(list_txt[1], sep="\t")
 test_txt_df2 = pd.read_csv(list_txt[2], sep="\t")
-
-test_txt_df["Station"] = "1"
 
 test_app_df = combine_txt_df(list_txt[0:50])
 
 
 
+test_txt_df1.columns = ["foo", "bar", "foo1", "bar1"]
 
+test_txt_df1.shape[1]
