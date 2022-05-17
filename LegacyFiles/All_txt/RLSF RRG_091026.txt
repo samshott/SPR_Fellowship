@@ -1,0 +1,3 @@
+Date Time	Event (Rain Bucket Tip)
+10/20/09 09:51:16.0	0
+10/26/09 13:23:43.0	0

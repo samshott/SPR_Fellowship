@@ -1,0 +1,5 @@
+Serial Number:     531980     --     Series: Event (Rain bucket tip)
+
+Date Time	Event (Rain bucket tip)
+10/30/07 12:08:38.0	0
+11/06/07 14:29:47.5	0

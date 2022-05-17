@@ -1,0 +1,5 @@
+Serial Number:     503050     --     Series: Event (Rain Bucket Tip)
+Deleted accidental tip at DL time
+Date Time	Event (Rain Bucket Tip)
+10/31/07 13:19:46.0	0
+11/06/07 14:56:37.5	0

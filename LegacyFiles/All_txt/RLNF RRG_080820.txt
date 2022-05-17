@@ -1,0 +1,6 @@
+Serial Number:     502911     --     Series: Event (Rainbucket Tip)
+
+Date Time	Event (Rainbucket Tip)
+08/07/08 14:06:10.0	0
+08/16/08 18:24:50.0	0.0105
+08/20/08 14:02:44.0	0.0105

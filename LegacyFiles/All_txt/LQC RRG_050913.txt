@@ -1,0 +1,6 @@
+"Date Time	Event ("	n Bucket Tip)
+6/2/2005 14:44	0
+6/2/2005 14:44	0.01
+6/8/2005 5:15	0.02
+6/9/2005 19:38	0.03
+Battery dead after 6/9	

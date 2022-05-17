@@ -1,0 +1,5 @@
+Serial Number:     144726     --     Series: Event (rain bucket tip)
+
+Date Time	Event (rain bucket tip)
+02/26/08 13:35:54.0	0
+03/12/08 09:24:24.5	0

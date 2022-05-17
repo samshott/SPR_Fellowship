@@ -1,0 +1,6 @@
+Serial Number:     532217     --     Series: Event (Events)
+
+Date Time	Event (Events)
+12/04/08 13:39:17.0	0
+12/10/08 13:45:46.0	0.0109
+12/10/08 13:45:51.0	0.0109

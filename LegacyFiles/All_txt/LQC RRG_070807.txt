@@ -1,0 +1,6 @@
+Serial Number:     531972     --     Series: Event (Rainfall )
+
+Date Time	Event (Rainfall )
+07/31/07 12:13:24.0	0
+08/07/07 12:39:05.5	0.01
+08/07/07 12:39:20.5	0.01

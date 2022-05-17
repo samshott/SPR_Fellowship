@@ -1,0 +1,7 @@
+Serial Number:     202809     --     Series: Event (Rainfall event data)
+
+Date Time	Event (Rainfall event data)
+11/09/10 13:38:26.0	0
+11/09/10 13:38:39.5	0.01
+11/09/10 13:38:44.0	0.02
+11/16/10 12:31:12.5	0.02

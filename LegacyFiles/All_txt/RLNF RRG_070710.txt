@@ -1,0 +1,5 @@
+Serial Number:     502911     --     Series: Event ()
+
+Date Time	Event ()
+07/03/07 13:02:59.0	0
+07/10/07 11:21:47.5	0
