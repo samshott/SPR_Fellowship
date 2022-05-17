@@ -48,7 +48,7 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
     :param sep: string, how files are parsed
     :return: list, index 0: pandas data.frame of appended files, index 1: error files
     """
-    append_df=pd.DataFrame()
+    append_df=pd.DataFrame(columns=["Date Time", "Bucket Tip (in)"])
     # append_df.columns["Date Time"] = ""
     # append_df.columns["Rain (in)"] = ""
     # append_df.columns["Temp"] = ""
@@ -58,6 +58,7 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
     for txt_file in path_list:
         try:
             txt_df = pd.read_csv(txt_file, sep=sep)
+            txt_df = txt_df.rename(columns={txt_df.columns[0]:"Date Time", txt_df.columns[1]:"Bucket Tip (in)"})
             for column in txt_df.columns:
                 if not (column in append_df.columns):
                     append_df[str(column)] = ""  #for preserving columns from logger. maybe better to assume order
@@ -89,8 +90,12 @@ list_txt = search_filetype(path="LegacyFiles/All_txt/", extentension=".txt")
 test_txt_df1 = pd.read_csv(list_txt[1], sep="\t")
 test_txt_df2 = pd.read_csv(list_txt[2], sep="\t")
 
+test_app_df = []
 test_app_df = combine_txt_df(list_txt[0:50])
+test_txt_df1 = test_txt_df1.rename(columns={test_txt_df1.columns[0]:"Date Time", test_txt_df1.columns[1]:"Bucket Time (in)"})
+blank_df = pd.DataFrame()
 
+blank_df.append(test_txt_df1)
 
 
 test_txt_df1.columns = ["foo", "bar", "foo1", "bar1"]
