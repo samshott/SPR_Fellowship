@@ -59,18 +59,16 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
         try:
             txt_df = pd.read_csv(txt_file, sep=sep)
             txt_df = txt_df.rename(columns={txt_df.columns[0]:"Date Time", txt_df.columns[1]:"Bucket Tip (in)"})
-            for column in txt_df.columns:
-                if not (column in append_df.columns):
-                    append_df[str(column)] = ""  #for preserving columns from logger. maybe better to assume order
-            # if txt_df.shape[1] == 2:
-            #     txt_df.columns = ["Date Time", "Rain (in)"]
-            #     txt_df["Temp"] = ""
-            # elif txt_df.shape[1] == 3:
-            #     txt_df.columns = ["Date Time", "Rain (in)", "Temp"]
             txt_df["File Name"] = txt_file.split()[-1].split(".")[0]
             append_df = append_df.append(txt_df)
         except:
-            error_files.append(txt_file)
+            try:
+                #ignore serial number header
+                pd.read_csv(txt_file, header=1, sep="\t")
+                txt_df["File Name"] = txt_file.split()[-1].split(".")[0]
+                append_df = append_df.append(txt_df)
+            except:
+                error_files.append(txt_file)
     if not quiet:
         print("Unsuccesfull appends: ", error_files)
     return append_df
