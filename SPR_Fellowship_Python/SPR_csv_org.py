@@ -1,14 +1,13 @@
 import os
-import hoboreader
+#import hoboreader
 import pandas as pd
 import shutil
 import matplotlib as mp
 
 os.chdir("..")
 os.getcwd()
-
+#%%
 def search_filetype(path = ".", extentension = ""):
-
     """
     :param path: string, where to search
     :param extentension: string, what files to look for
@@ -20,7 +19,7 @@ def search_filetype(path = ".", extentension = ""):
             if filename[-len(extentension):] == extentension:
                 paths.append(dirpath + filename)
     return paths
-
+#%%
 def copy_file(search_path=".", copy_dir="", extentension="",show_errors = True):
     """
     :param search_path: string, directory to search
@@ -41,7 +40,12 @@ def copy_file(search_path=".", copy_dir="", extentension="",show_errors = True):
     if show_errors:
         print(error_files)
     return (error_files)
+#%%
 
+
+##keep serial number if possible
+##keep name if available
+##
 def combine_txt_df(path_list = [], sep = "\t", quiet=False):
     """
     :param path_list: list, paths to txt files
@@ -64,7 +68,7 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
         except:
             try:
                 #ignore serial number header
-                pd.read_csv(txt_file, header=1, sep="\t")
+                pd.read_csv(txt_file, header=1, sep=sep)
                 txt_df["File Name"] = txt_file.split()[-1].split(".")[0]
                 append_df = append_df.append(txt_df)
             except:
@@ -80,19 +84,19 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
 # copy_file(search_path="./OneDrive_1_5-6-2022/",
 #           copy_dir= "./LegacyFiles/All_txt/",
 #           extentension=".txt")
-
+#%%
 list_txt = search_filetype(path="LegacyFiles/All_txt/", extentension=".txt")
 
 
-
+#%%
 test_txt_df1 = pd.read_csv(list_txt[1], sep="\t")
 test_txt_df2 = pd.read_csv(list_txt[2], sep="\t")
-
-test_app_df = []
+#%%
+#test_app_df = []
 test_app_df = combine_txt_df(list_txt[0:50])
 test_txt_df1 = test_txt_df1.rename(columns={test_txt_df1.columns[0]:"Date Time", test_txt_df1.columns[1]:"Bucket Time (in)"})
 blank_df = pd.DataFrame()
-
+#%%
 blank_df.append(test_txt_df1)
 
 
