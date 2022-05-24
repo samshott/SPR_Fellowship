@@ -1,11 +1,33 @@
+#%%
 import os
-#import hoboreader
+#from hoboreader import HoboReader
 import pandas as pd
 import shutil
 import matplotlib as mp
+import re
 
-os.chdir("..")
+#os.chdir("..")
+os.chdir("C:\\Users\\samer\\OneDrive - Cal Poly\\Classes\\SPR_Fellowship\\SPR_Fellowship")
 os.getcwd()
+
+#%%
+def header_fixer(path = ".", col_names = []):
+    """
+    :param path: 
+    :return: 
+    """
+    csv = pd.read_csv(path, sep="\t")
+    #csv = pd.read_csv(list_ex_headers[1],sep="\t")
+    #path = list_ex_headers[1]
+    if csv.shape[1] < 2:
+        serial_Num = re.findall("[0-9]{5,6}", csv.columns[0])
+        csv = pd.read_csv(path, header=1, sep="\t")
+        csv["Serial Number"] = serial_Num[0]
+    else:
+        csv = pd.read_csv(path, sep="\t")
+        csv["Serial Number"] =  None
+    return csv
+
 #%%
 def search_filetype(path = ".", extentension = ""):
     """
@@ -85,6 +107,7 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
 #           copy_dir= "./LegacyFiles/All_txt/",
 #           extentension=".txt")
 #%%
+list_ex_headers = search_filetype(path="LegacyFiles/All_txt/txt_header_examples/", extentension=".txt")
 list_txt = search_filetype(path="LegacyFiles/All_txt/", extentension=".txt")
 
 
@@ -92,7 +115,7 @@ list_txt = search_filetype(path="LegacyFiles/All_txt/", extentension=".txt")
 test_txt_df1 = pd.read_csv(list_txt[1], sep="\t")
 test_txt_df2 = pd.read_csv(list_txt[2], sep="\t")
 #%%
-#test_app_df = []
+test_app_df = []
 test_app_df = combine_txt_df(list_txt[0:50])
 test_txt_df1 = test_txt_df1.rename(columns={test_txt_df1.columns[0]:"Date Time", test_txt_df1.columns[1]:"Bucket Time (in)"})
 blank_df = pd.DataFrame()
@@ -100,6 +123,19 @@ blank_df = pd.DataFrame()
 blank_df.append(test_txt_df1)
 
 
-test_txt_df1.columns = ["foo", "bar", "foo1", "bar1"]
+#test_txt_df1.columns = ["foo", "bar", "foo1", "bar1"]
 
-test_txt_df1.shape[1]
+#test_txt_df1.shape[1]
+
+
+#%%
+comb_df = pd.DataFrame()
+errors = 0
+for path in list_txt:
+    try:
+        csv = header_fixer(path)
+        comb_df = pd.concat([comb_df, csv], ignore_index=True)
+    except:
+        print(path)
+        errors += 1
+print(errors)
