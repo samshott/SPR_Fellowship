@@ -13,8 +13,9 @@ os.getcwd()
 #%%
 def header_fixer(path = ".", col_names = []):
     """
-    :param path: 
-    :return: 
+    :param path:
+    :param col_names:
+    :return:
     """
     csv = pd.read_csv(path, sep="\t")
     #csv = pd.read_csv(list_ex_headers[1],sep="\t")
@@ -26,6 +27,7 @@ def header_fixer(path = ".", col_names = []):
     else:
         csv = pd.read_csv(path, sep="\t")
         csv["Serial Number"] =  None
+
     return csv
 
 #%%
@@ -39,7 +41,7 @@ def search_filetype(path = ".", extentension = ""):
     for dirpath, dirnames, filenames in os.walk(path):
         for filename in filenames:
             if filename[-len(extentension):] == extentension:
-                paths.append(dirpath + filename)
+                paths.append(dirpath + "/" + filename)
     return paths
 #%%
 def copy_file(search_path=".", copy_dir="", extentension="",show_errors = True):
@@ -107,6 +109,8 @@ def combine_txt_df(path_list = [], sep = "\t", quiet=False):
 #           copy_dir= "./LegacyFiles/All_txt/",
 #           extentension=".txt")
 #%%
+#%%
+
 list_ex_headers = search_filetype(path="LegacyFiles/All_txt/txt_header_examples/", extentension=".txt")
 list_txt = search_filetype(path="LegacyFiles/All_txt/", extentension=".txt")
 
@@ -115,12 +119,17 @@ list_txt = search_filetype(path="LegacyFiles/All_txt/", extentension=".txt")
 test_txt_df1 = pd.read_csv(list_txt[1], sep="\t")
 test_txt_df2 = pd.read_csv(list_txt[2], sep="\t")
 #%%
-test_app_df = []
-test_app_df = combine_txt_df(list_txt[0:50])
-test_txt_df1 = test_txt_df1.rename(columns={test_txt_df1.columns[0]:"Date Time", test_txt_df1.columns[1]:"Bucket Time (in)"})
-blank_df = pd.DataFrame()
+#test_app_df = []
+#test_app_df = combine_txt_df(list_txt[0:50])
+#test_txt_df1 = test_txt_df1.rename(columns={test_txt_df1.columns[0]:"Date Time", test_txt_df1.columns[1]:"Bucket Time (in)"})
+#blank_df = pd.DataFrame()
 #%%
-blank_df.append(test_txt_df1)
+def cumulative_to_individual(dataframe, column_index):
+    pass
+
+
+
+#blank_df.append(test_txt_df1)
 
 
 #test_txt_df1.columns = ["foo", "bar", "foo1", "bar1"]
@@ -131,11 +140,14 @@ blank_df.append(test_txt_df1)
 #%%
 comb_df = pd.DataFrame()
 errors = 0
+error_list = []
 for path in list_txt:
     try:
         csv = header_fixer(path)
+        csv["fileName"] = path.split(sep="/")[-1]
         comb_df = pd.concat([comb_df, csv], ignore_index=True)
     except:
         print(path)
+        error_list.append(path)
         errors += 1
 print(errors)
