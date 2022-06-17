@@ -1,0 +1,3 @@
+Date Time	1/100 inches of rain
+10/29/00 12:43:38.0	0	Start
+01/21/01 14:29:15.5	0	End
